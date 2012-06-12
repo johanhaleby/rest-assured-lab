@@ -12,7 +12,7 @@ public class SingleUserServiceSpec {
         expect().
                 body("firstName", equalTo("Tim")).
         when().
-                get("/service/single-user").prettyPrint();
+                get("/service/single-user");
     }
 
     @Test
