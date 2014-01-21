@@ -14,8 +14,8 @@ Part 1
 
 * Follow installation instructions on http://www.hascode.com/2011/10/testing-restful-web-services-made-easy-using-the-rest-assured-framework/.
 * When installation is completed you should run "mvn tomcat:run" and then go to http://localhost:8080 where you'll find all the services.
-* There's a sample test case in com.jayway.restassured.lab.part1.SingleUserServiceSpec for the "single-user". Complete this spec and then create similar
-  specifications/tests for all services while following the instructions on hascode.com.
+* There's a sample test case in com.jayway.restassured.lab.part1.SingleUserServiceTest for the "single-user". Complete this test and then create similar
+  tests for all services while following the instructions on hascode.com. You should use the given-when-then API!
 
 Part 2
 ======
