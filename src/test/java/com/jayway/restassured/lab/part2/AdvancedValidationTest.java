@@ -18,6 +18,9 @@ package com.jayway.restassured.lab.part2;
 
 import org.junit.Test;
 
+import static com.jayway.restassured.RestAssured.when;
+import static org.hamcrest.Matchers.is;
+
 public class AdvancedValidationTest {
 
     // /shopping
@@ -39,5 +42,16 @@ public class AdvancedValidationTest {
         // Find the price of most expensive book
         // Find the title of the cheapest book
         // Sum of the length of all author names
+    }
+
+    @Test
+    public void products() throws Exception {
+        when().
+                get("/products").
+        then().
+                body("price.sum()", is(38.0d)).
+                body("dimensions.width.min()", is(1.0f)).
+                body("name.collect { it.length() }.max()", is(16)).
+                body("dimensions.multiply(2).height.sum()", is(21));
     }
 }
